@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const mockData = {
         hotels: [
             { name: 'Cozy Inn', rating: '4.2', price: '$55/night', img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&auto=format&fit=crop' },
-            { name: 'City Center Hotel', rating: '4.5', price: '$75/night', img: 'https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?w=400&auto=format&fit=crop' },
+            { name: 'City Center Hotel', rating: '4.5', price: '$75/night', img: './images/hotel.jpg' },
             { name: 'Budget Stay', rating: '3.9', price: '$40/night', img: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&auto=format&fit=crop' }
         ],
         food: {
             'italy': {
                 dishes: [
                     { name: 'Pizza Margherita', img: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&auto=format&fit=crop'},
-                    { name: 'Carbonara', img: 'https://images.unsplash.com/photo-1588013273468-411962b21955?w=400&auto=format&fit=crop'}
+                    { name: 'Carbonara', img: './images/carbonara.jpg'}
                 ],
                 restaurants: [
                     { name: 'Trattoria da Enzo', cuisine: 'Roman'},
@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         packages: [
-            { name: 'Classic Europe', price: '$1200', img: 'https://images.unsplash.com/photo-1502602898657-3e91760c0341?w=400&auto=format&fit=crop', description: 'Paris, Rome, Venice (7 days)' },
+            { name: 'Classic Europe', price: '$1200', img: './images/europe.jpg', description: 'Paris, Rome, Venice (7 days)' },
             { name: 'Colors of India', price: '$800', img: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&auto=format&fit=crop', description: 'Delhi, Agra, Jaipur (5 days)' },
             { name: 'Japan Wonders', price: '$1500', img: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&auto=format&fit=crop', description: 'Tokyo, Kyoto (6 days)' },
-            { name: 'Swiss Alps Dream', price: '$1400', img: 'https://images.unsplash.com/photo-1593396443310-44446a893110?w=400&auto=format&fit=crop', description: 'Zurich, Interlaken (5 days)' }
+            { name: 'Swiss Alps Dream', price: '$1400', img: './images/swiss-alps.jpg', description: 'Zurich, Interlaken (5 days)' }
         ],
         adventures: {
             'maldives': [
-                { name: 'Scuba Diving', img: 'https://images.unsplash.com/photo-1577431145334-709885e33ca2?w=400&auto=format&fit=crop' },
-                { name: 'Snorkeling', img: 'https://images.unsplash.com/photo-1594541253138-2a884784a62e?w=400&auto=format&fit=crop' }
+                { name: 'Scuba Diving', img: './images/scubadiving.jpg' },
+                { name: 'Snorkeling', img: './images/snorkelling.jpg' }
             ],
              'dubai': [
                 { name: 'Desert Safari', img: 'https://images.unsplash.com/photo-1580775038863-222c19958348?w=400&auto=format&fit=crop' },
