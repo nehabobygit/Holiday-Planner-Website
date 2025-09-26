@@ -1,0 +1,118 @@
+/* --- Base and Global Styles --- */
+:root {
+    --orange: #ffa500;
+    --black: #333;
+    --light-gray: #666;
+    --bg-color: #f7f7f7;
+    --border-light: rgba(0,0,0,.1);
+    --border-hover: rgba(0,0,0,0.15); 
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    background: var(--bg-color); /* Added a background to the whole page */
+}
+
+body {
+    font-size: 1.6rem; /* Set a default font size for the body */
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heading span {
+    font-size: 3.5rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1.2rem;
+    display: inline-block;
+}
+
+/* --- Review Section Styles --- */
+
+.review .review-slider {
+    /* This container holds the slider. We add padding for aesthetics */
+    padding: 2rem 0;
+}
+
+.review .swiper-slide {
+    /* This is the individual slide. We make it a flex container to help position the box inside */
+    display: flex;
+    height: auto; /* Let Swiper calculate the height */
+    padding-bottom: 4rem; /* Add space at the bottom for pagination */
+}
+
+.review .box {
+    /* This is the review card itself */
+    flex: 1; /* Make the box fill the entire slide */
+    display: flex; /* Use flexbox for the card's internal layout */
+    flex-direction: column; /* Stack content vertically */
+    
+    padding: 2.5rem;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 1rem 2rem var(--border-light);
+    border-radius: .7rem;
+    
+    /* ADDED: Smooth transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review .box:hover {
+    /* ADDED: Interactive "lift" effect on hover */
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 3rem var(--border-hover);
+}
+
+.review .box img {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: .5rem solid var(--orange);
+    align-self: center; /* Center the image within the flex container */
+}
+
+.review .box h3 {
+    color: var(--black);
+    font-size: 2.2rem;
+}
+
+.review .box p {
+    color: var(--light-gray);
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+    line-height: 1.8;
+    
+    /* IMPROVED: This makes the text grow to push the stars to the bottom */
+    flex-grow: 1; 
+}
+
+.review .box .stars i {
+    color: var(--orange);
+    font-size: 1.7rem;
+}
+
+/* --- Swiper Pagination Styles --- */
+.swiper-pagination-bullet-active {
+    background: var(--orange);
+}

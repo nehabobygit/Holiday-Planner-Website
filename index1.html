@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Booking & Discovery</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>F</span>
+        <span>I</span>
+        <span>N</span>
+        <span>D</span>
+        <span class="space"></span>
+        <span>Y</span>
+        <span>O</span>
+        <span>U</span>   
+        <span>R</span>  
+        <span class="space"></span>
+        <span>A</span>
+        <span>D</span>
+        <span>V</span>   
+        <span>E</span>
+        <span>N</span>
+        <span>T</span>
+        <span>U</span>   
+        <span>R</span>
+        <span>E</span>
+    </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="./book_now_image.png" alt="Travel Discovery Illustration">
+        </div>
+
+        <div class="form-container">
+            <!-- Part 1: Interest-Based Discovery -->
+            <div class="interest-search">
+                <h3>Discover Your Next Destination</h3>
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="interest-input" placeholder="Type an interest (e.g., 'mountains', 'islands')...">
+                </div>
+                <div class="interest-tags">
+                    <span class="tag active" data-interest="mountains">Mountains</span>
+                    <span class="tag" data-interest="beaches">Beaches</span>
+                    <span class="tag" data-interest="cities">Cities</span>
+                    <span class="tag" data-interest="islands">Islands</span>
+                    <span class="tag" data-interest="deserts">Deserts</span>
+                    <span class="tag" data-interest="hill stations">Hill Stations</span>
+                </div>
+                <div id="results-container">
+                    <!-- Dynamic results will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom JS File -->
+<script src="script1.js"></script>
+
+</body>
+</html>

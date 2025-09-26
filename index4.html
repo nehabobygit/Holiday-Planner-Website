@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Itinerary & Budget Planner</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+     <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<section class="planner-section" id="planner">
+    <h1 class="heading">
+        <span>I</span>
+        <span>T</span>
+        <span>I</span>
+        <span>N</span>
+        <span>E</span>
+        <span>R</span>
+        <span>A</span>
+        <span>R</span>
+        <span>Y</span>
+        <span class="space"></span>
+        <span>P</span>
+        <span>L</span>
+        <span>A</span>
+        <span>N</span>
+        <span>N</span>
+        <span>E</span>
+        <span>R</span>
+    </h1>
+
+    <div class="planner-container">
+        <!-- Itinerary Column -->
+        <div class="itinerary-planner">
+            <div class="itinerary-header">
+                <i class="fas fa-route"></i>
+                <input type="text" id="trip-title-input" value="My Trip to Paris">
+            </div>
+            
+            <div class="timeline" id="itinerary-timeline">
+                <!-- Sample Initial Item -->
+                <div class="timeline-item">
+                    <div class="timeline-item-header">
+                        <h4>Eiffel Tower Visit</h4>
+                        <button class="delete-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                    <p>Evening visit to see the tower sparkle.</p>
+                    <div class="timeline-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2025-10-15</span>
+                        <span><i class="fas fa-clock"></i> 7:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form to Add Itinerary Item -->
+            <div class="add-item-form">
+                <h4>Add to Itinerary</h4>
+                <form id="itinerary-form">
+                    <div class="input-group">
+                        <input type="text" id="itinerary-title" placeholder="Activity Title (e.g., Louvre Museum)" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="date" id="itinerary-date" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="time" id="itinerary-time" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Add Activity</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Budget Tracker Column -->
+        <div class="budget-tracker">
+            <h3 class="budget-header"><i class="fas fa-wallet"></i> Budget Tracker</h3>
+            
+            <div class="budget-list" id="budget-list">
+                 <!-- JS will populate this -->
+            </div>
+            
+            <div class="budget-total">
+                <h3>Total Estimated Cost:</h3>
+                <span id="total-cost">$0.00</span>
+            </div>
+
+            <!-- Form to Add Budget Item -->
+             <div class="add-item-form">
+                <h4>Add Expense</h4>
+                <form id="budget-form">
+                    <div class="input-group">
+                        <select id="expense-category" required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="Flights">Flights</option>
+                            <option value="Accommodation">Accommodation</option>
+                            <option value="Activities">Activities</option>
+                            <option value="Food">Food</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="expense-amount" placeholder="Amount ($)" required min="0">
+                    </div>
+                    <button type="submit" class="btn">Add Expense</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script4.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Travel Services</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<!-- Original Services Section -->
+<section class="services" id="services">
+    <h1 class="heading">
+        <span>S</span>
+        <span>E</span>
+        <span>R</span>
+        <span>V</span>
+        <span>I</span>
+        <span>C</span>
+        <span>E</span>
+        <span>S</span>   
+    </h1>
+    <div class="box-container">
+        <div class="box" data-modal="hotel-modal">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordable Hotels</h3>
+            <p>Stay comfortably without the hefty price tag. Your perfect, affordable escape starts here.</p>
+        </div>
+        <div class="box" data-modal="food-modal">
+            <i class="fas fa-utensils"></i>
+            <h3>Food and Drinks</h3>
+            <p>Taste the world, one bite at a time. Your guide to authentic local flavors.</p>
+        </div>
+        <div class="box" data-modal="safety-modal">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Safety Guide</h3>
+            <p>Travel smart, travel safe. Your essential guide for a completely worry-free journey.</p>
+        </div>
+        <div class="box" data-modal="world-modal">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Around the World</h3>
+            <p>Your passport to the planet. Explore iconic landmarks and hidden gems worldwide.</p>
+        </div>
+        <div class="box" data-modal="travel-modal">
+            <i class="fas fa-plane"></i>
+            <h3>Fastest Travel</h3>
+            <p>More time exploring, less time in transit. Discover the quickest travel hacks.</p>
+        </div>
+        <div class="box" data-modal="adventure-modal">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures</h3>
+            <p>Create stories worth telling. Find your next adrenaline-pumping adventure right here.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MODALS SECTION -->
+
+<!-- Hotel Modal -->
+<div id="hotel-modal" class="service-modal">
+    <div class="modal-content">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-header">
+            <i class="fas fa-hotel"></i>
+            <h2>Find Affordable Hotels</h2>
+        </div>
+        <div class="modal-body">
+            <form class="modal-form">
+                <div class="input-group">
+                    <label>Destination</label>
+                    <input type="text" placeholder="e.g., Paris, France">
+                </div>
+                <div class="input-group">
+                    <label>Arrival</label>
+                    <input type="date">
+                </div>
+                <div class="input-group">
+                    <label>Leaving</label>
+                    <input type="date">
+                </div>
+                <div class="input-group">
+                    <label>Guests</label>
+                    <input type="number" value="2">
+                </div>
+                <button type="submit" class="btn">Search Hotels</button>
+            </form>
+            <div class="results-grid">
+                <!-- JS will populate this -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Food Modal -->
+<div id="food-modal" class="service-modal">
+    <div class="modal-content">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-header">
+            <i class="fas fa-utensils"></i>
+            <h2>Discover Local Cuisine</h2>
+        </div>
+        <div class="modal-body">
+            <form class="modal-form">
+                 <div class="input-group" style="flex-grow: 3;">
+                    <label>Enter a Place</label>
+                    <input type="text" placeholder="e.g., Rome, Italy">
+                </div>
+                 <button type="submit" class="btn">Discover Food</button>
+            </form>
+             <h3 style="font-size: 2rem; margin: 2rem 0 1rem;">Famous Foods & Drinks</h3>
+            <div class="results-grid" id="famous-food-grid">
+                <!-- JS will populate this -->
+            </div>
+             <h3 style="font-size: 2rem; margin: 2rem 0 1rem;">Top Restaurants & Cafes</h3>
+            <div class="results-grid" id="restaurants-grid">
+                <!-- JS will populate this -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Safety Modal -->
+<div id="safety-modal" class="service-modal">
+    <div class="modal-content">
+         <i class="fas fa-times modal-close"></i>
+        <div class="modal-header">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Travel Safety Guide</h2>
+        </div>
+        <div class="modal-body">
+            <form class="modal-form">
+                 <div class="input-group" style="flex-grow: 3;">
+                    <label>Enter a Country or Place</label>
+                    <input type="text" placeholder="e.g., Japan">
+                </div>
+                 <button type="submit" class="btn">Get Safety Tips</button>
+            </form>
+            <div class="results-grid">
+                <!-- JS will populate this -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Around the World Modal -->
+<div id="world-modal" class="service-modal">
+    <div class="modal-content">
+         <i class="fas fa-times modal-close"></i>
+        <div class="modal-header">
+            <i class="fas fa-globe-asia"></i>
+            <h2>Affordable Travel Packages</h2>
+        </div>
+        <div class="modal-body">
+            <div class="results-grid">
+                <!-- JS will populate this automatically -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fastest Travel Modal -->
+<div id="travel-modal" class="service-modal">
+    <div class="modal-content">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-header">
+            <i class="fas fa-plane"></i>
+            <h2>Calculate Travel Costs</h2>
+        </div>
+        <div class="modal-body">
+            <div class="travel-options">
+                <div class="option active" data-mode="flight"><i class="fas fa-plane"></i></div>
+                <div class="option" data-mode="train"><i class="fas fa-train"></i></div>
+                <div class="option" data-mode="bus"><i class="fas fa-bus"></i></div>
+                <div class="option" data-mode="ship"><i class="fas fa-ship"></i></div>
+                 <div class="option" data-mode="uber"><i class="fab fa-uber"></i></div>
+            </div>
+            <form class="modal-form">
+                 <div class="input-group">
+                    <label>From</label>
+                    <input type="text" placeholder="Initial Destination">
+                </div>
+                 <div class="input-group">
+                    <label>To</label>
+                    <input type="text" placeholder="Final Destination">
+                </div>
+                 <button type="submit" class="btn">Calculate Fare</button>
+            </form>
+            <div class="results-grid">
+                 <!-- JS will populate this -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Adventures Modal -->
+<div id="adventure-modal" class="service-modal">
+    <div class="modal-content">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-header">
+            <i class="fas fa-hiking"></i>
+            <h2>Find Your Next Adventure</h2>
+        </div>
+        <div class="modal-body">
+             <form class="modal-form">
+                 <div class="input-group" style="flex-grow: 3;">
+                    <label>Enter a Place</label>
+                    <input type="text" placeholder="e.g., Maldives">
+                </div>
+                 <button type="submit" class="btn">Find Adventures</button>
+            </form>
+            <div class="results-grid">
+                <!-- JS will populate this -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script2.js"></script>
+</body>
+</html>

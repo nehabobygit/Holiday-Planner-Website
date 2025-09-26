@@ -1,0 +1,287 @@
+  /* --- Base Styles & Variables --- */
+        :root {
+            --orange: #ffa500;
+            --black: #333;
+            --light-gray: #666;
+            --bg-color: #f7f7f7;
+            --border-light: rgba(0,0,0,.1);
+            --white: #fff;
+            --blue-tint: #edf2f7;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+        }
+
+        html {
+            font-size: 62.5%; /* 1rem = 10px */
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-color);
+        }
+        
+        /* --- Section & Heading Styles --- */
+        .planner-section {
+            padding: 5rem 9%;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .heading span {
+            font-size: 3.5rem;
+            background: rgba(255, 165, 0, .2);
+            color: var(--orange);
+            border-radius: .5rem;
+            padding: .2rem 1.2rem;
+            display: inline-block;
+        }
+
+        .heading span.space {
+            background: none;
+        }
+
+        /* --- Main Planner Layout --- */
+        .planner-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        /* --- Itinerary Timeline Styles --- */
+        .itinerary-planner {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 .5rem 2rem var(--border-light);
+        }
+
+        .itinerary-header {
+            display: flex;
+            align-items: center;
+            font-size: 2.4rem;
+            color: var(--black);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .itinerary-header i {
+            color: var(--orange);
+            margin-right: 1rem;
+        }
+        
+        /* UPDATED: Input for trip title */
+        #trip-title-input {
+            font-size: inherit;
+            font-weight: 600;
+            color: inherit;
+            background: transparent;
+            border: none;
+            width: 100%;
+            padding: 0.5rem;
+            margin-left: -0.5rem;
+            border-radius: .5rem;
+            transition: box-shadow .2s linear;
+        }
+        #trip-title-input:focus {
+            background: var(--white);
+            box-shadow: 0 0 0 2px var(--orange);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: .5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--blue-tint);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-color);
+            border-radius: .7rem;
+            border-left: 3px solid var(--orange);
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.4rem;
+            top: 1.5rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background: var(--orange);
+            border: 2px solid var(--white);
+        }
+
+        .timeline-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .5rem;
+        }
+        .timeline-item-header h4 {
+            font-size: 1.8rem;
+            color: var(--black);
+        }
+
+        .delete-btn {
+            background: none;
+            color: var(--light-gray);
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: color .2s linear;
+        }
+        .delete-btn:hover {
+            color: #e53e3e;
+        }
+
+        .timeline-item p {
+            font-size: 1.4rem;
+            color: var(--light-gray);
+        }
+
+        .timeline-meta {
+            font-size: 1.3rem;
+            color: var(--orange);
+            margin-top: 1rem;
+        }
+        .timeline-meta span {
+            margin-right: 1.5rem;
+        }
+        .timeline-meta i {
+            margin-right: .5rem;
+        }
+
+        /* --- Form for adding new items --- */
+        .add-item-form {
+            background: var(--blue-tint);
+            padding: 2rem;
+            border-radius: .7rem;
+            margin-top: 2rem;
+        }
+
+        .add-item-form h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.4rem;
+            border-radius: .5rem;
+            background: var(--white);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            background: var(--orange);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            font-size: 1.6rem;
+            border-radius: 5rem;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            transition: background .2s linear;
+        }
+        .btn:hover {
+            background: #e69500;
+        }
+        
+        /* --- Budget Tracker Styles --- */
+        .budget-tracker {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 .5rem 2rem var(--border-light);
+            position: sticky;
+            top: 2rem; /* Makes it stick on scroll */
+        }
+        
+        .budget-header {
+            font-size: 2.4rem;
+            color: var(--black);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+         .budget-header i {
+            color: var(--orange);
+            margin-right: 1rem;
+        }
+
+        .budget-list .budget-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+         .budget-list .budget-item span:first-child {
+            color: var(--light-gray);
+        }
+         .budget-list .budget-item span:last-child {
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        .budget-total {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--orange);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .budget-total h3 {
+            font-size: 2rem;
+            color: var(--black);
+        }
+        .budget-total span {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 991px) {
+            .planner-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+             .planner-section {
+                padding: 3rem 2rem;
+            }
+        }

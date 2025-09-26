@@ -1,0 +1,261 @@
+ /* --- Base Styles & Variables --- */
+        :root {
+            --orange: #ffa500;
+            --black: #333;
+            --light-gray: #666;
+            --bg-color: #f7f7f7;
+            --border-light: rgba(0,0,0,.1);
+            --white: #fff;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            transition: all .3s linear;
+        }
+
+        html {
+            font-size: 62.5%; /* 1rem = 10px */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-color);
+        }
+        
+        /* --- Original Services Section Styles (Slightly enhanced) --- */
+        .services {
+            padding: 5rem 9%;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .heading span {
+            font-size: 3.5rem;
+            background: rgba(255, 165, 0, .2);
+            color: var(--orange);
+            border-radius: .5rem;
+            padding: .2rem 1rem;
+            display: inline-block;
+        }
+        .services .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+        .services .box-container .box {
+            border-radius: .7rem;
+            padding: 2.5rem;
+            text-align: center;
+            background: var(--white);
+            box-shadow: 0 .5rem 1rem var(--border-light);
+            cursor: pointer;
+        }
+        .services .box-container .box:hover {
+            box-shadow: 0 1.5rem 3rem rgba(0,0,0,.15);
+            transform: translateY(-5px);
+        }
+        .services .box-container .box i {
+            padding-bottom: 1rem;
+            font-size: 5rem;
+            color: var(--orange);
+        }
+        .services .box-container .box h3 {
+            font-size: 2.2rem;
+            color: var(--black);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .services .box-container .box p {
+            font-size: 1.4rem;
+            color: var(--light-gray);
+            padding: 1rem 0;
+            line-height: 1.8;
+        }
+
+        /* --- Fullscreen Modal Styles --- */
+        .service-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.8);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            backdrop-filter: blur(5px);
+            transition: opacity .3s, visibility .3s;
+        }
+
+        .service-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-color);
+            width: 90%;
+            max-width: 95rem;
+            height: 90vh;
+            border-radius: 1rem;
+            padding: 3rem;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform .3s;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        .service-modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 3rem;
+            color: var(--light-gray);
+            cursor: pointer;
+        }
+        .modal-close:hover {
+            color: var(--orange);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .modal-header i {
+            font-size: 4rem;
+            color: var(--orange);
+        }
+        .modal-header h2 {
+            font-size: 3rem;
+            color: var(--black);
+            margin-top: 1rem;
+        }
+
+        .modal-body {
+            flex-grow: 1;
+        }
+        
+        /* --- General Modal Form & Result Styles --- */
+        .modal-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1.5rem;
+            align-items: flex-end;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: .7rem;
+            margin-bottom: 2rem;
+        }
+        .input-group label {
+            font-size: 1.4rem;
+            color: var(--light-gray);
+            margin-bottom: .5rem;
+            display: block;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.5rem;
+            border-radius: .5rem;
+            background: var(--bg-color);
+        }
+        
+        .btn {
+            background: var(--orange);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            font-size: 1.6rem;
+            border-radius: 5rem;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        .btn:hover {
+            background: #e69500;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+        }
+        
+        .result-card {
+            background: var(--white);
+            border-radius: .7rem;
+            padding: 2rem;
+            box-shadow: 0 .5rem 1rem var(--border-light);
+            text-align: center;
+        }
+        .result-card img {
+            width: 100%;
+            height: 15rem;
+            object-fit: cover;
+            border-radius: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        .result-card h4 {
+            font-size: 1.8rem;
+            color: var(--black);
+        }
+        .result-card p {
+            font-size: 1.4rem;
+            color: var(--light-gray);
+            margin: .5rem 0;
+        }
+        .result-card .price {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--orange);
+            margin-top: 1rem;
+        }
+        
+        /* --- Specific Modal Styles --- */
+        
+        /* Travel Modal */
+        .travel-options {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .travel-options .option {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .travel-options .option i {
+            font-size: 3rem;
+            color: var(--light-gray);
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+        }
+        .travel-options .option.active,
+        .travel-options .option:hover {
+            border-color: var(--orange);
+        }
+        .travel-options .option.active i,
+        .travel-options .option:hover i {
+            color: var(--orange);
+        }
