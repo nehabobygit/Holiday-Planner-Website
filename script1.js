@@ -7,39 +7,39 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Swiss Alps', description: 'Breathtaking peaks & trails', image: './images/swiss-alps.jpg' },
             { name: 'Himalayas, Nepal', description: 'Home to Mount Everest', image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&auto=format&fit=crop' },
             { name: 'Andes, Peru', description: 'Ancient ruins & culture', image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400&auto=format&fit=crop' },
-            { name: 'Rocky Mountains', description: 'Vast wilderness in USA', image: 'https://images.unsplash.com/photo-1470240731273-7821a6eeb685?w=400&auto=format&fit=crop' }
+            { name: 'Rocky Mountains', description: 'Vast wilderness in USA', image: './images/rocky_mountains.jpg' }
         ],
         beaches: [
-            { name: 'Maldives', description: 'Overwater bungalows & clear seas', image: 'https://images.unsplash.com/photo-1572263459272-123a23a3e7b2?w=400&auto=format&fit=crop' },
-            { name: 'Bora Bora', description: 'Ultimate tropical paradise', image: 'https://images.unsplash.com/photo-1508599589922-37cf6e6894b6?w=400&auto=format&fit=crop' },
+            { name: 'Maldives', description: 'Overwater bungalows & clear seas', image: './images/maldives.jpg' },
+            { name: 'Bora Bora', description: 'Ultimate tropical paradise', image: './images/bora-bora.jpg' },
             { name: 'Phuket, Thailand', description: 'Vibrant nightlife & stunning shores', image: 'https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=400&auto=format&fit=crop' },
-            { name: 'Goa, India', description: 'Relaxed vibes & golden sands', image: 'https://images.unsplash.com/photo-1596714248493-e4a77b8745a5?w=400&auto=format&fit=crop' }
+            { name: 'Goa, India', description: 'Relaxed vibes & golden sands', image: './images/goa.jpg' }
         ],
         cities: [
             { name: 'Tokyo, Japan', description: 'Futuristic tech & ancient culture', image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&auto=format&fit=crop' },
-            { name: 'Paris, France', description: 'The city of romance & art', image: 'https://www.istockphoto.com/photo/eiffel-tower-in-spring-gm1297043676-390287141?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fparis&utm_medium=affiliate&utm_source=unsplash&utm_term=paris%3A%3Aad-balancing-template%3Acontrol' },
+            { name: 'Paris, France', description: 'The city of romance & art', image: './images/paris.jpg' },
             { name: 'Rome, Italy', description: 'A journey through ancient history', image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&auto=format&fit=crop' },
             { name: 'New York, USA', description: 'The city that never sleeps', image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&auto=format&fit=crop' }
         ],
         islands: [
             { name: 'Bali, Indonesia', description: 'Spiritual retreats & lush jungles', image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&auto=format&fit=crop' },
-            { name: 'Santorini, Greece', description: 'Iconic white-washed villages', image: 'https://images.unsplash.com/photo-1533105079780-52b9be4ac20c?w=400&auto=format&fit=crop' },
-            { name: 'Fiji', description: 'Pristine waters & friendly culture', image: 'https://images.unsplash.com/photo-1574880811265-27a3a39f4d2b?w=400&auto=format&fit=crop' },
-            { name: 'Hawaii, USA', description: 'Volcanic landscapes & surf spots', image: 'https://images.unsplash.com/photo-1507525428034-b723a996f6ea?w=400&auto=format&fit=crop' }
+            { name: 'Santorini, Greece', description: 'Iconic white-washed villages', image: './images/greece.jpg' },
+            { name: 'Fiji', description: 'Pristine waters & friendly culture', image: './images/fiji.jpg' },
+            { name: 'Hawaii, USA', description: 'Volcanic landscapes & surf spots', image: './images/hawai.jpg' }
         ],
         deserts: [
             { name: 'Sahara, Morocco', description: 'Endless dunes & camel treks', image: 'https://images.unsplash.com/photo-1552318965-6e6be7484ada?w=400&auto=format&fit=crop' },
-            { name: 'Dubai, UAE', description: 'Modern marvels meet the sands', image: 'https://images.unsplash.com/photo-1531383401921-345338a53b59?w=400&auto=format&fit=crop' },
+            { name: 'Dubai, UAE', description: 'Modern marvels meet the sands', image: './images/dubai.jpg' },
             // --- FIXED URL ---
-            { name: 'Atacama, Chile', description: 'Otherworldly landscapes & stargazing', image: 'https://images.unsplash.com/photo-1542848134-a71d9d443385?w=400&auto=format&fit=crop' }
+            { name: 'Atacama, Chile', description: 'Otherworldly landscapes & stargazing', image: './images/chile.jpg' }
         ],
         'hill stations': [
              // --- FIXED URL ---
-             { name: 'Ooty, India', description: 'Queen of the Nilgiris', image: 'https://images.unsplash.com/photo-1603597383636-9e99a2fb6d01?w=400&auto=format&fit=crop' },
+             { name: 'Ooty, India', description: 'Queen of the Nilgiris', image: './images/ooty.jpg' },
              // --- FIXED URL ---
-             { name: 'Shimla, India', description: 'Colonial charm & snowy peaks', image: 'https://images.unsplash.com/photo-1581456226527-3193e5ba41b7?w=400&auto=format&fit=crop' },
+             { name: 'Shimla, India', description: 'Colonial charm & snowy peaks', image: './images/shimla.jpg' },
              // --- FIXED URL ---
-             { name: 'Munnar, India', description: 'Lush tea plantations', image: 'https://images.unsplash.com/photo-1593361595233-53d04dcbce3e?w=400&auto=format&fit=crop' }
+             { name: 'Munnar, India', description: 'Lush tea plantations', image: './images/munnar.jpg' }
         ]
     };
 
